@@ -11,6 +11,7 @@ pipeline {
     stage('build'){
         steps{
 	         mtaBuild script: this, mtaBuildTool: 'cloudMbt'
+             
 	    }
     }
     stage('deploy'){

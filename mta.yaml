@@ -12,6 +12,7 @@ modules:
     memory: 256M
 - name: test_ui_deployer
   type: com.sap.application.content
+  path: ui5
   requires:
   - name: test_html_repo_host
     parameters:
