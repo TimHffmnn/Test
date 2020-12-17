@@ -5,5 +5,5 @@ steps:
     cloudFoundry:
       credentialsId: 'CF_Credential'
       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-      org: '7d1682cbtrial'
-      space: 'test'
+      org: 'VW Hack2Sol_cfdev2020'
+      space: 'cicd'
