@@ -10,7 +10,7 @@ pipeline {
     }
     stage('build'){
         steps{
-	        mtaBuild script: this, mtabBuildTool: ‘cloudMbt’
+	         mtaBuild script: this, mtaBuildTool: 'cloudMbt'
 	    }
     }
     stage('deploy'){
