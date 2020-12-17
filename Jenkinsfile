@@ -1,9 +1,12 @@
 @Library('piper-lib-os') _
 pipeline {
   agent any
+  stages{
     stage('prepare') {
-        checkout scm
-        setupCommonPipelineEnvironment script:this
+        steps{
+            checkout scm
+            setupCommonPipelineEnvironment script:this
+        }
     }
     stage('build'){
         steps{
@@ -14,6 +17,6 @@ pipeline {
         steps{
 		    cloudFoundryDeploy script:this, deployTool:'mtaDeployPlugin', verbose: true
 		}
-    }
-
+     }
+  }
 }
