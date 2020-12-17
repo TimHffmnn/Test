@@ -1,16 +1,16 @@
 {
-  "index.html": 1608032249000,
-  "model/models.js": 1608032249000,
-  "manifest.json": 1608202753597,
+  "manifest.json": 1608204135208,
   "controller/View1.controller.js": 1608032249000,
+  "model/models.js": 1608032249000,
+  "i18n/i18n.properties": 1608032249000,
   "Component.js": 1608032249000,
-  "manifest-bundle.zip": 1608202753337,
-  "Component-preload.js": 1608202753575,
-  "Component-dbg.js": 1608032249000,
+  "manifest-bundle.zip": 1608204135011,
+  "Component-preload.js": 1608204135183,
   "controller/View1-dbg.controller.js": 1608032249000,
   "model/models-dbg.js": 1608032249000,
-  "resources.json": 1608202753600,
+  "Component-dbg.js": 1608032249000,
+  "resources.json": 1608204135212,
   "view/View1.view.xml": 1608032249000,
   "css/style.css": 1608032249000,
-  "i18n/i18n.properties": 1608032249000
+  "index.html": 1608032249000
 }
