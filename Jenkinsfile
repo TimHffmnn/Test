@@ -14,7 +14,16 @@ pipeline {
              
 	    }
     }
-
+    stage('check'){
+        steps{   	
+    		script{
+					git "https://github.com/TimHffmnn/test"
+    				def scannerHome = tool 'SonarCloud';
+    				withSonarQubeEnv('SonarCloud') { 
+    				 sh "${scannerHome}/bin/sonar-scanner"}				    
+    				}	   					
+			}
+    	}
     stage('Nexus deploy'){ 	
        	steps{           	        	
               nexusPublisher nexusInstanceId: 'localnexus', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/jenkins_home/workspace/Doku_Review_master/test.mtar']], mavenCoordinate: [artifactId: 'jenkins-mtar', groupId: 'org.jenkins-CF.main', packaging: '.mtar', version: '1.' + env.BUILD_NUMBER]]]
