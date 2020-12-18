@@ -14,6 +14,12 @@ pipeline {
              
 	    }
     }
+
+    stage('Nexus deploy'){ 	
+       	steps{           	        	
+              nexusPublisher nexusInstanceId: 'localnexus', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/jenkins_home/workspace/'+ env.JOB_NAME +'/test.mtar']], mavenCoordinate: [artifactId: 'jenkins-mtar', groupId: 'org.jenkins-CF.main', packaging: '.mtar', version: '1.' + env.BUILD_NUMBER]]]
+        		}        		
+			}
     stage('deploy'){
         steps{
 		    cloudFoundryDeploy script:this, deployTool:'mtaDeployPlugin', verbose: true
